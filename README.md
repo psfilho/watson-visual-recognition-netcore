@@ -6,11 +6,11 @@ Watson Visual Recognition SDK &amp; Tool for .NET Core
 This project consists of an abstraction SDK from Watson's Visual Recognition api's for .NetCore and web project utility for the management and classification of images.
 
 ## SDK
-------
-The SDK was developed using .NetCore, and is intended to facilitate the use of the Visual Recognition API for .NET developers, allowing the the use of face detection, image classification and managing custom classifiers.
+
+The SDK was developed using .NetCore, and is intended to facilitate the use of the Visual Recognition API for .NET developers, allowing the the use of face detection, image classification and managing custom classifiers in a fast and easy way
 
 ## Utility
-------
+
 The utility was developed above the SDK mentioned above, and using ASP.NET and AngularJS to create a simple and friendly interface.
 
 With this utility, it is intended that anyone, regardless of machine learning or programming knowledge, can use the benefits of visual recognition.
@@ -25,28 +25,26 @@ Examples:
 
 * Hospitals can diagnose imaging tests by comparing them to other tests.
 
-All of this without writing any line code or having a T.I. team to implement the solution.
+All of this without writing any line code or having a T.I. team to implement the solution. Only using the [Live Demo](http://watson-visual-recognition-tool.mybluemix.net/)
+
+
 
 ## Docs:
-------
+
 
 * For the Watson Visual Recognition API
 
   For instructions on using the Watson Visual Recognition API, visit the following documentation:
   http://www.ibm.com/watson/developercloud/doc/visual-recognition
 
-* For the use of the Tool
+* For the project instructions
 
-  For instructions on how to use the tool: 
+  For instructions on how to use the tool and the SDK: 
   
-  http://watson-visual-recognition-tool.mybluemix.net/tutorial
-
-* For SDK documentation:
-
   https://github.com/psbds/watson-visual-recognition-netcore/wiki
 
 ### Running the tool
-------
+
 ### System Requirements
 
 * Library's: 
@@ -121,3 +119,17 @@ All of this without writing any line code or having a T.I. team to implement the
       `dotnet restore`
 
       `dotnet run -p src / Watson.VisualRecognition.Tool `
+      
+### Next Steps
+
+The next steps for this project are:
+
+1. Publish the SDK as nuget package
+
+2. Improve documentation
+
+3. Implement Visual Recognition Collections (currently on BETA)
+
+
+
+#### Questions, suggestions and pull requests are always welcome, feel free to do it :)
