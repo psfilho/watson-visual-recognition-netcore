@@ -1,0 +1,102 @@
+﻿<div class="well well-sm home-icon" ng-click="openClassifierClassify();">
+    <h4>{{'ClassifyYourImages' |t }}</h4>
+    <i class="fa fa-image"></i>
+</div>
+<div class="modal modal-classifier-classify-all fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">{{'ClassifyImage' | t}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="loading" ng-show="loadingClassification"></div>
+                <div ng-show="!loadingClassification">
+                    <div class="row">
+                        <div class="col col-xs-12 col-sm-4 col-md-4 col-lg-4 classifier" ng-repeat="classifier in classifierOptions">
+                            <div class="panel panel-info classifier-option-panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">{{classifier.name}}
+                                    <input class='pull-right' type="checkbox" ng-model="classifier.use"/>
+                                     </h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="classifier-property">
+                                        {{'Id'|t}}: {{classifier.classifier_id}}
+                                    </div>
+                                    <div class="classifier-property">
+                                        <label class="label label-info" ng-repeat="class in classifier.classes">
+                                            {{class.class}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-xs-12 col-sm-6">
+                            <form ng-submit="classifyFile();">
+                                {{'ChoseAFile' | t}}...
+                                <div ngf-select="file = $file" ngf-drop="file = $files" class="drop-box file-drop"
+                                     ngf-drag-over-class="'dragover'" ngf-multiple="false"
+                                     ngf-pattern="'image/*,.zip'">
+                                    <span ng-if="file">{{file.name}}</span>
+                                    <span ng-if="!file">
+                                        {{'DropZipOrImageFileHere' | t}}
+                                    </span>
+                                </div>
+                                <div ngf-no-file-drop>{{'DragAndDropNotSupported' | t}}</div>
+
+                                <div class="col col-xs-12 no-padding">
+                                    <button class="btn btn-danger btn-sm btn-block">{{'Classify'|t}}</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col col-xs-12 col-sm-6">
+                            <form name="form" ng-submit="classifyUrl.search();">
+                                {{'orEnterAnUrl' | t}}
+                                <br />
+                                <br />
+                                <div class="col col-xs-8 col-sm-9 col-md-10 no-padding">
+                                    <input ng-model="classifyUrl.url" type="text" class="form-control input-sm" placeholder="{{'UrlToClassify'| t}}" required>
+                                </div>
+                                <div class="col col-xs-4 col-sm-3 col-md-2 no-padding">
+                                    <button class="btn btn-danger btn-sm">{{'Classify'|t}}</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="row-fluid classify-result" ng-if="classifyResult">
+                        <br />
+                        <h3 class="subtitle margin-botton-10" ng-if="classifyResult">
+                            {{classifyResult.images_processed}} {{ 'imagesProcessed'|t}}
+                            <hr />
+                        </h3>
+                        <div class="panel panel-info" ng-repeat="image in classifyResult.images">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">{{image.image}} {{image.resolved_url}}</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="well classifier" ng-repeat="classifier in image.classifiers">
+                                    <h5>{{'Classifier' | t}}: {{classifier.name}} ({{classifier.classifier_id}})</h5>
+                                    <label class="label label-info" ng-repeat="class in classifier.classes">
+                                        <i ng-if="$first" class="fa fa-star"></i> {{class.class}} ({{class.score}})
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xs-12">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{{ 'Close' | t}}</button>
+            </div>
+        </div>
+    </div>
+</div>

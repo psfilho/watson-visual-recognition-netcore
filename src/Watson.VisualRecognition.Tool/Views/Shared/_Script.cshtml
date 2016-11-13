@@ -1,0 +1,51 @@
+﻿<environment names="Development">
+    <!-- build:js bundle.js -->
+
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/lib/angular/angular.min.js"></script>
+    <script src="/lib/angular-animate/angular-animate.js"></script>
+    <script src="/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/lib/i18next/i18next.js"></script>
+    <script src="/lib/ng-i18next/dist/ng-i18next.js"></script>
+    <script src="/lib/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="/lib/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="/lib/angular-cookies/angular-cookies.js"></script>
+    <script src="/lib/angular-ui-router-anim-in-out/anim-in-out.js"></script>
+    <script src="/lib/ng-file-upload/ng-file-upload.js"></script>
+    <script src="/lib/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="/lib/clipboard/dist/clipboard.js"></script>
+    <script src="/lib/ngclipboard/dist/ngclipboard.js"></script>
+
+    @* -- Modules -- *@
+    <script src="/js/modules/utils.js"></script>
+    <script src="/js/modules/http.js"></script>
+    <script src="/js/modules/services.js"></script>
+    <script src="/js/modules/controllers.js"></script>
+    <script src="/js/modules/app.js"></script>
+    <script src="/js/modules/configs/routes.js"></script>
+    <script src="/js/modules/configs/interceptors.js"></script>
+
+    @*-- Services --*@
+    <script src="/js/services/messageService.js"></script>
+    <script src="/js/services/serviceService.js"></script>
+    <script src="/js/services/classifierService.js"></script>
+    <script src="/js/services/faceDetectionService.js"></script>
+
+    @*-- Directives --*@
+    <script src="/js/directives/serviceManagement.js"></script>
+    <script src="/js/directives/classifierManagement.js"></script>
+    <script src="/js/directives/classifierCreate.js"></script>
+    <script src="/js/directives/classifierClassify.js"></script>
+    <script src="/js/directives/faceDetection.js"></script>
+
+    @*-- Controllers --*@
+    <script src="/js/controllers/appController.js"></script>
+
+    <!-- endbuild -->
+</environment>
+<environment names="Staging,Production">
+    <script src="~/build/bundle.js" asp-append-version="true"></script>
+</environment>

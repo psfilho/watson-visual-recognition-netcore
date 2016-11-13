@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watson Visual Recognition Tool</title>
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+
+    @Html.Partial("_Style")
+</head>
+<body>
+
+    @RenderBody()
+
+    @Html.Partial("_Script")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

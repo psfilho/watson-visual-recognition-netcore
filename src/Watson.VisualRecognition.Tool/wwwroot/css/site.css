@@ -1,0 +1,154 @@
+﻿body {
+    background-color: white;
+}
+
+nav.navbar {
+    background-color: #4178bd;
+    border: 0;
+    border-bottom: solid 1px white;
+    margin-bottom: 0;
+}
+
+nav h3 {
+    color: white;
+}
+
+.container.main {
+    padding-bottom: 100px;
+}
+
+.control-label {
+    padding-top: 5px;
+}
+
+.panel-info {
+    border-color: #4178bd;
+}
+
+    .panel-info > .panel-heading {
+        color: white;
+        background-color: #4178bd;
+        border-color: #4178bd;
+    }
+
+.red {
+    color: maroon;
+    background-color: black;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.title {
+    color: #4178bd;
+}
+
+.subtitle {
+    margin: 0;
+    color: #4178bd;
+}
+
+    .subtitle hr {
+        margin: 6px 0 0 0;
+        border: solid 1px #4178bd;
+    }
+
+.no-radius {
+    border-radius: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.home-icon {
+    background-color: rgb(65, 120, 189);
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    border: solid 1px black;
+    width: 250px;
+}
+
+    .home-icon img {
+        width: 50px;
+    }
+
+    .home-icon i {
+        font-size: 40px;
+    }
+
+.classifier-option-panel{
+    min-height: 130px;
+}
+
+.padding-3 {
+    padding: 3px;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.margin-botton-10 {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #4178bd;
+}
+
+.classifier .classifierId {
+    padding: 3px 10px 0px 10px;
+    background-color: #4178bd;
+    color: white;
+}
+
+.classifier .panel-body {
+    padding: 0;
+}
+
+.classifier .pagination {
+    margin: 0;
+}
+
+    .classifier .pagination li {
+        float: right;
+    }
+
+.classifier .classifier-property {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+    .classifier .label.label-info {
+        margin-right: 5px;
+        font-size: 12px;
+    }
+
+.file-drop {
+    border: dotted 1px #d0d01b;
+    padding: 50px;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.classify-result .classifier {
+    padding: 5px;
+    margin: 3px;
+}
+
+.loading {
+    height: 200px;
+    width: 100%;
+    background: url('/images/watson.gif') no-repeat center center;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "jquery": "2.2.0",
+    "angular": "1.5.5",
+    "angular-loading-bar": "^0.9.0",
+    "font-awesome-bower": "^4.6.3",
+    "angular-toastr": "^2.1.1",
+    "ng-file-upload": "^12.2.12",
+    "i18next": "1.10.2",
+    "ng-i18next": "0.5.1",
+    "angular-ui-router": "^0.3.1",
+    "angular-animate": "^1.5.7",
+    "angular-cookies": "^1.5.7",
+    "angular-ui-router-anim-in-out": "^1.0.2",
+    "angular-bootstrap": "^2.1.3",
+    "ngclipboard": "^1.1.1",
+    "clipboard": "^1.5.15"
+  },
+  "resolutions": {
+    "angular": "^1.1.5"
+  }
+}

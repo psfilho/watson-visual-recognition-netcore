@@ -1,0 +1,90 @@
+﻿<div class="well well-sm home-icon pull-right" ng-click="openFaceDetection();">
+    <h4>{{'DetectFaces' |t }}</h4>
+    <i class="fa fa-smile-o"></i>
+</div>
+<div class="modal modal-face-detection fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">{{'FaceDetection' | t}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="loading" ng-show="loadingFaceDetection"></div>
+                <div ng-show="!loadingFaceDetection">
+                    <div class="row">
+                        <div class="col col-xs-12 col-sm-6">
+                            <form ng-submit="faceDetectionFile();">
+                                {{'ChoseAFile' | t}}...
+                                <div ngf-select="file = $file" ngf-drop="file = $files" class="drop-box file-drop"
+                                     ngf-drag-over-class="'dragover'" ngf-multiple="false"
+                                     ngf-pattern="'image/*,.zip'">
+                                    <span ng-if="file">{{file.name}}</span>
+                                    <span ng-if="!file">
+                                        {{'DropZipOrImageFileHere' | t}}
+                                    </span>
+                                </div>
+                                <div ngf-no-file-drop>{{'DragAndDropNotSupported' | t}}</div>
+
+                                <div class="col col-xs-12 no-padding">
+                                    <button class="btn btn-danger btn-sm btn-block">{{'DetectFaces'|t}}</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col col-xs-12 col-sm-6">
+                            <form name="form" ng-submit="faceDetectionUrl.search();">
+                                {{'orEnterAnUrl' | t}}
+                                <br />
+                                <br />
+                                <div class="col col-xs-8 col-sm-9 col-md-9 no-padding">
+                                    <input ng-model="faceDetectionUrl.url" type="text" class="form-control input-sm" placeholder="{{'UrlToDetect'| t}}" required>
+                                </div>
+                                <div class="col col-xs-4 col-sm-3 col-md-3 no-padding">
+                                    <button class="btn btn-danger btn-sm">{{'DetectFaces'|t}}</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="row-fluid classify-result" ng-if="faceDetectionResult">
+                        <br />
+                        <h3 class="subtitle margin-botton-10" ng-if="classifyResult">
+                            {{classifyResult.images_processed}} {{ 'imagesProcessed'|t}}
+                            <hr />
+                        </h3>
+                        <div class="panel panel-info" ng-repeat="image in faceDetectionResult.images">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">{{image.image}} {{image.resolved_url}}</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="well classifier" ng-repeat="face in image.faces">
+                                    <h5>{{'Face' | t}} {{$index+1}} <span ng-if="face.identity && face.identity.name">: {{face.identity.name}}</span></h5>
+                                    <div class="classifier-property" ng-if="face.age">
+                                        {{'Age'|t}}: {{face.age.min}} ~ {{face.age.max}} ({{'Score'| t}}: {{face.age.score}})
+                                    </div>
+                                    <div class="classifier-property" ng-if="face.gender">
+                                        {{'Gender'|t}}: {{face.gender.gender}}({{'Score'| t}}: {{face.gender.score}})
+                                    </div>
+                                    <div class="classifier-property" ng-if="face.identity">
+                                        {{'Identity'|t}}: {{face.identity.name }}({{'Score'| t}}: {{face.identity.score}})
+                                    </div>
+                                    <div class="classifier-property" ng-if="face.face_location">
+                                        {{'Location'|t}}: {{face.face_location.width}}x{{face.face_location.height}} - {{'Top'|t}}: {{face.face_location.width}} , {{'Left' | t}}: {{face.face_location.width}}   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xs-12">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{{ 'Close' | t}}</button>
+            </div>
+        </div>
+    </div>
+</div>

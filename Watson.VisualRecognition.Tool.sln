@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7B9CD1ED-A5F2-4565-B90F-7D2A69AA7585}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43F48F2A-FA08-44A8-8ECF-2BBCC77E9C0D}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Watson.VisualRecognition.Tool", "src\Watson.VisualRecognition.Tool\Watson.VisualRecognition.Tool.xproj", "{845FAD73-D853-4658-A1C4-04DA825711C4}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Watson.VisualRecognition.SDK", "src\Watson.VisualRecognition.SDK\Watson.VisualRecognition.SDK.xproj", "{998EFB46-7D0F-45E6-A2B8-778F6E2CA62B}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Watson.VisualRecognition.Console", "src\Watson.VisualRecognition.Console\Watson.VisualRecognition.Console.xproj", "{7D63B220-0F1D-4ABB-BEEC-791CC2F0537A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{845FAD73-D853-4658-A1C4-04DA825711C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845FAD73-D853-4658-A1C4-04DA825711C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845FAD73-D853-4658-A1C4-04DA825711C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845FAD73-D853-4658-A1C4-04DA825711C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{998EFB46-7D0F-45E6-A2B8-778F6E2CA62B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998EFB46-7D0F-45E6-A2B8-778F6E2CA62B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998EFB46-7D0F-45E6-A2B8-778F6E2CA62B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998EFB46-7D0F-45E6-A2B8-778F6E2CA62B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D63B220-0F1D-4ABB-BEEC-791CC2F0537A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D63B220-0F1D-4ABB-BEEC-791CC2F0537A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D63B220-0F1D-4ABB-BEEC-791CC2F0537A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D63B220-0F1D-4ABB-BEEC-791CC2F0537A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{845FAD73-D853-4658-A1C4-04DA825711C4} = {7B9CD1ED-A5F2-4565-B90F-7D2A69AA7585}
+		{998EFB46-7D0F-45E6-A2B8-778F6E2CA62B} = {7B9CD1ED-A5F2-4565-B90F-7D2A69AA7585}
+		{7D63B220-0F1D-4ABB-BEEC-791CC2F0537A} = {7B9CD1ED-A5F2-4565-B90F-7D2A69AA7585}
+	EndGlobalSection
+EndGlobal
