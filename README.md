@@ -79,46 +79,46 @@ All of this without writing any line code or having a T.I. team to implement the
 
 3. Install [bower](https://bower.io/)
   
-  1. Open the npm command line
+        1. Open the npm command line
   
-  2. Run the command `bower install -g`
+        2. Run the command `bower install -g`
 
 
 4. Run the Project
 
-  1. For Linux and Mac Users
+    1. For Linux and Mac Users
     
-    1. Go to the solution folder and open the npm command line
+        1. Go to the solution folder and open the npm command line
     
-    2. Run the command `npm install`
+        2. Run the command `npm install`
   
-    3. Run the command `bower install`
+        3. Run the command `bower install`
   
-    4. Open the terminal and run:
+        4. Open the terminal and run:
 
-      `dotnet restore`
+         `dotnet restore`
 
-      `dotnet run -p src / Watson.VisualRecognition.Tool `
+         `dotnet run -p src / Watson.VisualRecognition.Tool `
     
-  2. For Windows Users with Visual Studio
+    2. For Windows Users with Visual Studio
 
-    1. Open the solution in Visual Studio and wait for the restoration of nuget, npm and bower packages
+        1. Open the solution in Visual Studio and wait for the restoration of nuget, npm and bower packages
    
-    2. Hit F5 to build and Run
+        2. Hit F5 to build and Run
     
-  3. For Windows Users without Visual Studio
+    3. For Windows Users without Visual Studio
 
-    1. Go to the solution folder and open the npm command line
+        1. Go to the solution folder and open the npm command line
     
-    2. Run the command `npm install`
+        2. Run the command `npm install`
   
-    3. Run the command `bower install`
+        3. Run the command `bower install`
     
-    4. Navigate to the solution folder, open the command window and run:
+        4. Navigate to the solution folder, open the command window and run:
    
-      `dotnet restore`
+        `dotnet restore`
 
-      `dotnet run -p src / Watson.VisualRecognition.Tool `
+        `dotnet run -p src / Watson.VisualRecognition.Tool `
       
 ### Next Steps
 
